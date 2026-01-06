@@ -62,7 +62,7 @@ else:
 # n = int(input("Enter the no to check the number is automorphic or not: "))
 # value = int(input("enter the sunm like 10,100,1000: "))
 
-ans = n*n
+# ans = n*n
 # last_digits = ans % value
 # if last_digits == n:
 #     print(f"The given no is automorphic number {n}")
