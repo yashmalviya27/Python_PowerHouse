@@ -67,4 +67,28 @@ for i in range(1,n+1,1):
         sum+=i
 print(sum) """    
 
-# Question.9: 
+# Question.9: Power calculation (a^b)
+
+""" n = int(input("Enter the base number: "))
+p = int(input("Enter the power number: "))
+
+result = 1
+for i in range(p):
+    result *= n
+print(result) """
+
+# Question.10: Prime number or not
+
+""" n = int(input("Enter the number: "))
+
+is_prime = True
+
+for i in range(2,n):
+    if (n%i)==0:
+        is_prime = False
+        break
+
+if is_prime:
+    print("Prime Number")
+else:
+    print("Not Prime") """
