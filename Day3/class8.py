@@ -59,18 +59,17 @@ else:
 
 # Question.5: automorphic number
 
-# n = int(input("Enter the no to check the number is automorphic or not: "))
-# value = int(input("enter the sunm like 10,100,1000: "))
+n = int(input("Enter the number you want to find an automorphic no ot not: "))
+copy = n
+count = 0
+ans = n**2
 
-# ans = n*n
-# last_digits = ans % value
-# if last_digits == n:
-#     print(f"The given no is automorphic number {n}")
-# else:
-#     print(f"The given no is not automorphic number {n}")
-""" length = len(str(n))
-last_digits = ans % (10**length)
-if last_digits == n:
-    print(f"The given no is automorphic number {n}")
+while n>0:
+    count+=1
+    n = n//10
+
+ans = ans%(10**count)
+if copy==ans:
+    print(f"{copy} is an automorphic num.")
 else:
-    print(f"The given no is not automorphic number {n}") """
+    print("Not an automorphic num.")
