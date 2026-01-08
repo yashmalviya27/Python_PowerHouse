@@ -111,7 +111,8 @@ for i in range(len(n)//2):
 print(f"the rev list is: {n}.") """
 
 # Question 8: Remove duplicates from a list
-n = [10, 20, 30, 10, 10, 20, 50,20,20,20,20]
+
+""" n = [10, 20, 30, 10, 10, 20, 50,20,20,20,20]
 
 i = 0
 while i < len(n):
@@ -123,4 +124,4 @@ while i < len(n):
             j += 1
     i += 1
 
-print(f"The list without duplicates is: {n}")
+print(f"The list without duplicates is: {n}") """
