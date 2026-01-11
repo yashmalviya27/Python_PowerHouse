@@ -88,3 +88,92 @@ print(s.repeatedCharacter(s="abccbaacz")) """
 
 s = Solution()
 print(s.sumOfUnique(nums=[1,2,3,2])) """
+
+# Question.7: leetCode 2418- sort the people
+
+""" class Solution:
+    def sortPeople(self, names: list, heights: list) -> list:
+        d = {}
+        for i in range(len(names)):
+            d[heights[i]] = names[i]
+        heights.sort(reverse=True)
+        names.clear()
+        for i in heights:
+            names.append(d[i])
+        return names
+
+s = Solution()
+print(s.sortPeople(names=["Mary","John","Emma"], heights=[180,165,170])) """
+
+# Question.8: check if two string having same frequency map
+
+""" class Solution:
+    def isAngram(self, s: str, t: str) -> bool:
+        d = {}
+        for i in s:
+            if i in d.keys():
+                d[i]+=1
+            else:
+                d[i]=1
+        for i in t:
+            if i in d.keys():
+                d[i]-=1
+            else:
+                return False
+        for i in d:
+            if d[i] != 0:
+                return False
+        return True
+
+s = Solution()
+print(s.isAngram(s="anagram", t="nagaram")) """
+
+# Question.9: find all the duplicate in an array
+
+""" class Solution:
+    def findDuplicates(self, nums: list) -> list:
+        d = {}
+        for i in nums:
+            if i in d.keys():
+                d[i]+=1
+            else:
+                d[i]=1
+        nums.clear()
+        for i in d:
+            if d[i] > 1:
+                nums.append(i)
+        return nums
+
+s = Solution()
+print(s.findDuplicates(nums=[4,3,2,7,8,2,3,1])) """
+
+class Solution:
+    def mostFrequent(self, nums: list) -> int:
+        d = {}
+
+        # Count only even numbers
+        for i in nums:
+            if i % 2 == 0:
+                if i in d:
+                    d[i] += 1
+                else:
+                    d[i] = 1
+
+        # If no even numbers
+        if not d:
+            return -1
+
+        max_freq = 0
+        ans = -1
+
+        # Find most frequent even (smallest if tie)
+        for i in d:
+            if d[i] > max_freq or (d[i] == max_freq and i < ans):
+                max_freq = d[i]
+                ans = i
+
+        return ans
+
+
+s = Solution()
+print(s.mostFrequent(nums=[29,47,21,41,13,37,25,7]))
